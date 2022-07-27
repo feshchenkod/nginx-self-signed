@@ -6,6 +6,7 @@ RUN apk add --no-cache openssl
 
 COPY proxy.conf /etc/nginx/templates/default.conf.template
 COPY docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
+COPY openssl.cnf /etc/ssl/openssl.cnf
 
 RUN chmod +x /usr/bin/docker-entrypoint.sh
 
